@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+/* * {
+    border: 1px solid red;
+} */
+
+:root{
+
+    /* 1st theme */
+    /* --main: #00b7ae;
+    --bgc: #cef8f8; */
+
+/* 2nd theme */
+    /* --main: #487437;
+    --bgc:#e2fac9; */
+
+    /* 3rd theme */
+    --main: #5F5FB4;
+    --bgc:#5f5fb418;
+
+}
+
+
+body {
+
+    background-color: var(--bgc);
+
+    padding: 0;
+    margin: 0;
+    
+}
+
+.box{
+
+/* background-color: #faf9f9; */
+box-shadow: 0px 0px 10px 0px #2929293d;
+
+}
+
+
+nav {
+
+    padding: 05px 80px;
+    background-color: #ffffff96;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px ; */
+    
+
+}
+
+nav ul {
+    display: flex;
+    /* background-color: #beffbe; */
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: #292929;
+    font-size: 16px;
+}
+
+li:hover {
+    cursor: pointer;
+    color: var(--main);
+    transition: 300ms;
+
+    transform: translateY(2px);
+}
+
+nav li:last-child {
+    color: #fff;
+    background-color:var(--main);
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    margin-left: 8px;
+}
+
+div {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Added hamburger menu styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--main);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Added responsive styles */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .links.active {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    nav li:last-child {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    /* Hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(9px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -5px);
+    }
+}

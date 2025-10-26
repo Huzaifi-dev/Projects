@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav</title>
+
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+    <nav>
+        <div>
+            <p>logooo</p>
+        </div>
+
+        <!-- Added hamburger menu button for mobile -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="links">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Stories</li>
+            <!-- <li>Blog</li> -->
+            <li>Contact</li>
+        </ul>
+    </nav>
+    
+    <!-- Added JavaScript for mobile menu toggle -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</div>
+
+
+
+</body>
+
+</html>
